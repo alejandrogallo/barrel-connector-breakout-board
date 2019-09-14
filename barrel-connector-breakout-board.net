@@ -1,0 +1,66 @@
+(export (version D)
+  (design
+    (source /home/gallo/software/kicad-projects/barrel-connector-breakout-board/barrel-connector-breakout-board.sch)
+    (date "Sat 14 Sep 2019 08:16:13 PM CEST")
+    (tool "Eeschema 5.0.2+dfsg1-1~bpo9+1")
+    (sheet (number 1) (name /) (tstamps /)
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date)
+        (source barrel-connector-breakout-board.sch)
+        (comment (number 1) (value ""))
+        (comment (number 2) (value ""))
+        (comment (number 3) (value ""))
+        (comment (number 4) (value "")))))
+  (components
+    (comp (ref J1)
+      (value Barrel_Jack)
+      (footprint Connector_BarrelJack:BarrelJack_CUI_PJ-102AH_Horizontal)
+      (datasheet ~)
+      (libsource (lib Connector) (part Barrel_Jack) (description "DC Barrel Jack"))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5D631A73))
+    (comp (ref J2)
+      (value Conn_01x02_Male)
+      (footprint Connector_PinSocket_2.00mm:PinSocket_1x02_P2.00mm_Vertical)
+      (datasheet ~)
+      (libsource (lib Connector) (part Conn_01x02_Male) (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 5D7D2D98)))
+  (libparts
+    (libpart (lib Connector) (part Barrel_Jack)
+      (aliases
+        (alias Jack-DC))
+      (description "DC Barrel Jack")
+      (docs ~)
+      (footprints
+        (fp BarrelJack*))
+      (fields
+        (field (name Reference) J)
+        (field (name Value) Barrel_Jack))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib Connector) (part Conn_01x02_Male)
+      (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")
+      (docs ~)
+      (footprints
+        (fp Connector*:*_1x??_*))
+      (fields
+        (field (name Reference) J)
+        (field (name Value) Conn_01x02_Male))
+      (pins
+        (pin (num 1) (name Pin_1) (type passive))
+        (pin (num 2) (name Pin_2) (type passive)))))
+  (libraries
+    (library (logical Connector)
+      (uri /usr/share/kicad/library/Connector.lib)))
+  (nets
+    (net (code 1) (name GND)
+      (node (ref J1) (pin 2))
+      (node (ref J2) (pin 1)))
+    (net (code 2) (name "Net-(J1-Pad1)")
+      (node (ref J1) (pin 1))
+      (node (ref J2) (pin 2)))))

@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name barrel-connector-breakout-board)(type KiCad)(uri /home/gallo/software/kicad-projects/barrel-connector-breakout-board)(options "")(descr ""))
+)
